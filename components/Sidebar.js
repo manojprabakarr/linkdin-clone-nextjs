@@ -1,25 +1,25 @@
-import { useAuthState } from 'react-firebase-hooks/auth';
-
 import { Avatar } from '@material-ui/core';
 
-import { auth } from '../firebase';
-
 function Sidebar() {
-   const [user] = useAuthState(auth);
     return (
-        <div className="ml- mr-10"style={{flex:"0.2"}} >
-        <div className="flex  items-center">
 
-        <Avatar src="https://www.statuspik.com/wp-content/uploads/2020/12/whatsapp-dp-pic-1.jpg" style={{width:"100px",height:"100px"}}/>
-        <div className="flex flex-col">
-          <h2 className="font-medium">{user.email}</h2>
-          <h4 className="text-gray-500">{user.email}</h4>
-          </div>
+       <div className="p-2 mt-5 max-w-[600px] xl:min-w-[300px]">
 
+       <div className="flex p-3 cursor-pointer">
 
+       <Avatar src="https://logodix.com/logo/79688.ico" className="object-contain" style={{width:"100px",height:"100px"}} />
+
+       <div className="mt-6">
+        
+        <h2>manoj prabakar</h2>
+        <h3 className="text-gray-500">@gmail.xom</h3>
+       </div>
+       
         </div>
-         
-         <div className="text-gray-500 leading-10 mt-10 ">
+       
+
+       <div className="text-gray-500 leading-10 ml-8  ">
+
 
           <div>
            <a href="/">Your Statistics</a>
@@ -38,7 +38,7 @@ function Sidebar() {
            <a href="/">Groups</a>
           </div>
 
-           <hr style={{color:"grey"}}/>
+           <hr className="bg-gray-500"/>
            <div>
            <a href="/">Hashtags</a>
           </div>
@@ -48,9 +48,11 @@ function Sidebar() {
           </div>
          
          </div>
-            
-        </div>
-    )
+      
+        
+       </div>
+            )
+
 }
 
 export default Sidebar

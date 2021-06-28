@@ -16,12 +16,7 @@ function Login() {
     
 
 
-  const handleRegister=e=> {
-      e.preventDefault();
-       auth.createUserWithEmailAndPassword(email,password).catch(alert);
-     
-
-  }
+  
 
  
   
@@ -57,7 +52,7 @@ function Login() {
         
         <p className="ml-10">new to Linkedin? 
         <span>
-        <button onClick={handleRegister} className="hover:border rounded-full  bg-blue-200  hover:underline">Register</button>
+        <button className="hover:border rounded-full  bg-blue-200  hover:underline">Register</button>
         </span></p>
         
       

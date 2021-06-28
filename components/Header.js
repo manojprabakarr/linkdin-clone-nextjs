@@ -1,52 +1,63 @@
 import Image from 'next/image';
 
-import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
-import ChatIcon from '@material-ui/icons/Chat';
-import HomeIcon from '@material-ui/icons/Home';
+import AppsIcon from '@material-ui/icons/Apps';
+import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import PersonIcon from '@material-ui/icons/Person';
 import SearchIcon from '@material-ui/icons/Search';
-import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+import WorkIcon from '@material-ui/icons/Work';
 
 function Header() {
  
     return (
-        <div className="sticky  flex items-center w-full h-16  " style={{backgroundColor:"white"}}>
-         
-          {/*headerleft*/}
-        <div className="flex items-center ml-4 ">  
-        <Image className="object-contain " src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG38.png" width={50} height={50} />
-         
-           <div className=" flex items-center  text-grey p-2 border-b-2 ml-10">
-             <SearchIcon style={{color:"grey"}}/>
-             <input className="outline-none w-full bg-white bg-none border-0" type="text" placeholder="search"  />
-          </div>
-
-        </div> 
-
-       {/*headerright*/}
-        <div className= " flex  justify-evenly  flex-grow  " style={{color:"black"}} >
-
+       
         
-        <HomeIcon className="hover:opacity-50 "/>
+        <div className="sticky flex items-center top-0 z-50 w-full h-auto  bg-white  p-2 lg:px-5 shadow-md ">
 
-        <SupervisorAccountIcon className="hover:opacity-50 "/>
-
-        <BusinessCenterIcon className="hover:opacity-50 "/>
-
-        <ChatIcon className="hover:opacity-50 "/>
-
-        <NotificationsIcon className="hover:opacity-50 "/>
-
-
-        <p className="hover:opacity-50 ">upgrade to premium</p>
-
+        <div className="flex items-center">
+         <Image
+          src="https://logodix.com/logo/79688.ico"
+          width={50}
+          height={50}
+           layout="fixed"
+          className="cursor-pointer"
+        />
+        
         
 
-        
+       
 
+        <div className="flex ml-2 items-center  rounded-full bg-gray-100 p-2">
 
+            <SearchIcon className="h-6 text-gray-600"/>
+
+            <input className="outline-none hidden flex-shrink  md:inline-flex placeholder-gray-500 ml-2 items-center bg-transparent" type="text" placeholder="search"/>   
         
         </div>
+
+         </div>
+
+
+        <div className="flex  justify-evenly  flex-grow text-gray-700 ">
+         <AppsIcon  className="hover:opacity-50 "/>
+
+         <WorkIcon className="hover:opacity-50 "/>
+
+         <ChatBubbleIcon className="hover:opacity-50 "/>
+
+         <NotificationsIcon className="hover:opacity-50 "/>
+
+
+
+        <PersonIcon className="hover:opacity-50 "/>
+
+
+     <p className="hover:opacity-50 ">upgrade to premium</p>
+        
+         
+         
+         </div>
+        
             
         </div>
     )

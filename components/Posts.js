@@ -4,12 +4,12 @@ import ImageIcon from '@material-ui/icons/Image';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 
 import InputOption from './InputOption';
-import PostData from './Postdata';
+import Postdata from './Postdata';
 
-function Post({posts}) {
+function Posts() {
     return (
 
-        <div  className="flex flex-col " style={{flex:"0.6"}}>
+        <div  className="flex flex-col flex-grow h-screen pb-44 pt-6 mr-4 xl:mr-40  overflow-x-hidden scrollbar-hide " >
         <div  className="bg-white border rounded-3xl h-32     " >
 
         <form className="flex mt-4 ml-14 mr-10 mb-10">
@@ -35,7 +35,7 @@ function Post({posts}) {
 
        <div className="mt-16 mb-20">
       
-       <PostData posts={posts}/>
+        <Postdata/>
       
        
        </div>
@@ -43,4 +43,4 @@ function Post({posts}) {
     )
 }
 
-export default Post
+export default Posts
