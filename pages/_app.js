@@ -14,21 +14,18 @@ function MyApp({ Component, pageProps }) {
   const[user]=useAuthState(auth);
 
 
-  useEffect(() => {
-    if (user) {
-			db.collection('users').doc().set(
+ useEffect(() => {
+		if (user) {
+			db.collection('users').doc(user.uid).set(
 				{
 					email: user.email,
-         
-			
-				
+					
 				},
 				{ merge: true }
 			);
 		}
-    
-  }, [user]);
-
+	}, [user]);
+  
   if(!user) return <Login/>;
   return <Component {...pageProps} />
 

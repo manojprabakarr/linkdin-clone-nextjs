@@ -6,6 +6,36 @@ import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 import InputOption from './InputOption';
 import Postdata from './Postdata';
 
+const posters = [
+  {
+    src: "https://links.papareact.com/f0p",
+    name: "Jeff Bezos",
+    role:"@f"
+  },
+  {
+    src: "https://links.papareact.com/kxk",
+    name: "Elon Musk",
+    role:"Founder Tesla"
+  },
+  {
+    src: "https://links.papareact.com/zvy",
+    name: "bill gates",
+    role:"businessman"
+  },
+  {
+    src: "https://links.papareact.com/snf",
+    name: "Mark",
+    role:"fb"
+  },
+  {
+    src: "https://links.papareact.com/d0c",
+    name: "Harry Potter",
+    role:"actor"
+  }
+  
+];
+
+
 function Posts() {
     return (
 
@@ -35,7 +65,9 @@ function Posts() {
 
        <div className="mt-16 mb-20">
       
-        <Postdata/>
+        {posters.map(contact => (
+          <Postdata key={contact.id} src={contact.src} name={contact.name} developer={contact.role}/>
+      ))}
       
        
        </div>

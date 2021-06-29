@@ -17,16 +17,19 @@ export default function Home() {
       </Head>
 
      
+    
       
-       <Header/>
-
+       
+      
+         <Header/>
        <main className="flex">
        <Sidebar/>
        <Posts/>
        <Widgets/>
+   
        </main>
      
-        
+         
 
       
      

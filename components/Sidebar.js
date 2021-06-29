@@ -1,18 +1,24 @@
+import { useAuthState } from 'react-firebase-hooks/auth';
+
 import { Avatar } from '@material-ui/core';
 
+import { auth } from '../firebase';
+
 function Sidebar() {
+   const[user]=useAuthState(auth);
+
     return (
 
-       <div className="p-2 mt-5 max-w-[600px] xl:min-w-[300px]">
+       <div className="p-2 mt-5 max-w-[600px] xl:min-w-[300px] mr-10 ">
 
        <div className="flex p-3 cursor-pointer">
 
-       <Avatar src="https://logodix.com/logo/79688.ico" className="object-contain" style={{width:"100px",height:"100px"}} />
+       <Avatar src="https://links.papareact.com/kxk" className="object-contain" style={{width:"100px",height:"100px"}} />
 
        <div className="mt-6">
         
-        <h2>manoj prabakar</h2>
-        <h3 className="text-gray-500">@gmail.xom</h3>
+        <h2>{user.email}</h2>
+       
        </div>
        
         </div>
